@@ -2,23 +2,30 @@ package week2.day1.package1;
 
 public class ReverseEvenWords {
 	//Build a logic to reverse the even position words (output: I ma a erawtfos tester)
-
-	
-
-	/* Pseudo Code:
-	 
-	 * Declare the input as Follow
-      		String test = "I am a software tester"; 
-	a) split the words and have it in an array
-	b) Traverse through each word (using loop)
-	c) find the odd index within the loop (use mod operator)
-	
-	d)split the words and have it in an array
-	
-	e)print the even position words in reverse order using another loop (nested loop)
-	f) Convert words to character array if the position is even else print the word as it is(concatenate space at the end).
-	
-	 
-*/
-
+	public static void main(String[] args) {
+		String test= "I am a software tester" ;
+		//			  0 1  2 3         4
+		String [] array = test.split(" ");
+		for (int i=0; i< array.length;i++) {
+			if(i %2 == 0) {
+				System.out.print(" ");
+				System.out.print(array[i]+ " ");
+			}
+			if(i %2 != 0) {
+				String word = array[i];
+				char[] revword = word.toCharArray();
+				for(int j=revword.length-1;j>=0;j--) {
+					System.out.print(revword[j]);
+					
+				}
+			}
+			
+		}
+		
+		
+		
+	}
 }
+
+
+
